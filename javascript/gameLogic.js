@@ -3,6 +3,7 @@ $(document).ready(function() {
   var cell = $("#cell");
   var vegeta = $("#vegeta");
   var goku = $("#goku");
+  var row1 = $("#row1");
 
   $("#goku").on("click", function() {
     beerus.remove();
@@ -13,21 +14,27 @@ $(document).ready(function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(beerus);
+          row1.append(
+            "<button class='btn btn-primary' style='margin-left:1%'>Attack</button>"
+          );
+          row1.append(
+            "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Beerus</strong></button>"
+          );
         }
       })
     );
-    // .on("click", function() {
-    //   console.log("here");
-    //   var row3 = $("#row3");
-    //   if (row3.children().length == 0) {
-    //     row3.append(beerus);
-    //   }
-    // });
+
     $("#row2").append(
       cell.on("click", function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(cell);
+          row1.append(
+            "<button class='btn btn-primary' style='margin-left:1%'>Attack</button>"
+          );
+          row1.append(
+            "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Cell</strong></button>"
+          );
         }
       })
     );
@@ -37,6 +44,12 @@ $(document).ready(function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(vegeta);
+          row1.append(
+            "<button class='btn btn-primary' style='margin-left:1%'>Attack</button>"
+          );
+          row1.append(
+            "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Vegeta</strong></button>"
+          );
         }
       })
     );
@@ -51,6 +64,12 @@ $(document).ready(function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(goku);
+          row1.append(
+            "<button class='btn btn-primary' style='margin-left:1%'>Attack</button>"
+          );
+          row1.append(
+            "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Goku</strong></button>"
+          );
         }
       })
     );
@@ -60,6 +79,12 @@ $(document).ready(function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(cell);
+          row1.append(
+            "<button class='btn btn-primary' style='margin-left:1%'>Attack</button>"
+          );
+          row1.append(
+            "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Cell</strong></button>"
+          );
         }
       })
     );
@@ -69,6 +94,12 @@ $(document).ready(function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(vegeta);
+          row1.append(
+            "<button class='btn btn-primary' style='margin-left:1%'>Attack</button>"
+          );
+          row1.append(
+            "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Vegeta</strong></button>"
+          );
         }
       })
     );
@@ -83,6 +114,12 @@ $(document).ready(function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(beerus);
+          row1.append(
+            "<button class='btn btn-primary' style='margin-left:1%'>Attack</button>"
+          );
+          row1.append(
+            "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Beerus</strong></button>"
+          );
         }
       })
     );
@@ -92,6 +129,12 @@ $(document).ready(function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(goku);
+          row1.append(
+            "<button class='btn btn-primary' style='margin-left:1%'>Attack</button>"
+          );
+          row1.append(
+            "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Goku</strong></button>"
+          );
         }
       })
     );
@@ -101,6 +144,12 @@ $(document).ready(function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(vegeta);
+          row1.append(
+            "<button class='btn btn-primary' style='margin-left:1%'>Attack</button>"
+          );
+          row1.append(
+            "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Vegeta</strong></button>"
+          );
         }
       })
     );
@@ -115,6 +164,12 @@ $(document).ready(function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(beerus);
+          row1.append(
+            "<button class='btn btn-primary' style='margin-left:1%'>Attack</button>"
+          );
+          row1.append(
+            "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Beerus</strong></button>"
+          );
         }
       })
     );
@@ -126,6 +181,12 @@ $(document).ready(function() {
         if (row3.children().length == 0) {
           console.log("Apending cell");
           row3.append(cell);
+          row1.append(
+            "<button class='btn btn-primary' style='margin-left:1%'>Attack</button>"
+          );
+          row1.append(
+            "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Cell</strong></button>"
+          );
         }
       })
     );
@@ -135,6 +196,12 @@ $(document).ready(function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(goku);
+          row1.append(
+            "<button class='btn btn-primary' style='margin-left:1%'>Attack</button>"
+          );
+          row1.append(
+            "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Goku</strong></button>"
+          );
         }
       })
     );
