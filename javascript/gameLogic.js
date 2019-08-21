@@ -4,6 +4,9 @@ $(document).ready(function() {
   var vegeta = $("#vegeta");
   var goku = $("#goku");
   var row1 = $("#row1");
+  var button = $(".btn-primary");
+
+  button.on("click", function() {});
 
   $("#goku").on("click", function() {
     beerus.remove();
