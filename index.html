@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="javascript/gameLogic.js"></script> -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="assets/css/styles.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<!-- <script type="text/javascript" src="javascript/gameLogic.js"></script> -->
 
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lexend+Tera&display=swap"
-      rel="stylesheet"
-    />
+		<link
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Lexend+Tera&display=swap"
+			rel="stylesheet"
+		/>
 
-    <title>RPG game</title>
-  </head>
+		<title>RPG game</title>
+	</head>
 
-  <body>
-    <div class="row">
-      <div class="col-md-2" id="goku">
-        <div class="card" style="width: 18rem;">
-          <img
-            class="card-img-top"
-            src="assets/images/goku_new.jpg"
-            alt="Card image cap"
-            width="150px"
-            height="250px"
-          />
-          <a href="#" class="btn btn-danger"
-            >Goku<span style="margin-left:1%" id="gokuHP">HP: 100</span></a
-          >
-        </div>
-      </div>
-      <div class="col-md-2" id="beerus">
-        <div class="card" style="width: 18rem;">
-          <img
-            class="card-img-top"
-            src="assets/images/beerus_new.jpg"
-            alt="Card image cap"
-            width="150px"
-            height="250px"
-          />
-          <a href="#" class="btn btn-danger"
-            >Beerus<span style="margin-left:1%" id="beerusHP">HP: 100</span></a
-          >
-        </div>
-      </div>
-      <div class="col-md-2" id="vegeta">
-        <div class="card" style="width: 18rem;">
-          <img
-            class="card-img-top"
-            src="assets/images/vegeta.jpg"
-            alt="Card image cap"
-            width="150px"
-            height="250px"
-          />
-          <a href="#" class="btn btn-danger"
-            >Vegeta<span style="margin-left:1%" id="vegetaHP">HP: 100</span></a
-          >
-        </div>
-      </div>
+	<body>
+		<div class="row">
+			<div class="col-md-2" id="goku">
+				<div class="card" style="width: 18rem;">
+					<img
+						class="card-img-top"
+						src="assets/images/goku_new.jpg"
+						alt="Card image cap"
+						width="150px"
+						height="250px"
+					/>
+					<a href="#" class="btn btn-danger"
+						>Goku<span style="margin-left:1%" id="gokuHP">HP: 100</span></a
+					>
+				</div>
+			</div>
+			<div class="col-md-2" id="beerus">
+				<div class="card" style="width: 18rem;">
+					<img
+						class="card-img-top"
+						src="assets/images/beerus_new.jpg"
+						alt="Card image cap"
+						width="150px"
+						height="250px"
+					/>
+					<a href="#" class="btn btn-danger"
+						>Beerus<span style="margin-left:1%" id="beerusHP">HP: 100</span></a
+					>
+				</div>
+			</div>
+			<div class="col-md-2" id="vegeta">
+				<div class="card" style="width: 18rem;">
+					<img
+						class="card-img-top"
+						src="assets/images/vegeta.jpg"
+						alt="Card image cap"
+						width="150px"
+						height="250px"
+					/>
+					<a href="#" class="btn btn-danger"
+						>Vegeta<span style="margin-left:1%" id="vegetaHP">HP: 100</span></a
+					>
+				</div>
+			</div>
 
-      <div class="col-md-2" id="cell">
-        <div class="card" style="width: 18rem;">
-          <img
-            class="card-img-top"
-            src="assets/images/cell-new.jpg"
-            alt="Card image cap"
-            width="150px"
-            height="250px"
-          />
-          <a href="#" class="btn btn-danger"
-            >Cell<span style="margin-left:1%" id="cellHP">HP: 100</span></a
-          >
-        </div>
-      </div>
-    </div>
+			<div class="col-md-2" id="cell">
+				<div class="card" style="width: 18rem;">
+					<img
+						class="card-img-top"
+						src="assets/images/cell-new.jpg"
+						alt="Card image cap"
+						width="150px"
+						height="250px"
+					/>
+					<a href="#" class="btn btn-danger"
+						>Cell<span style="margin-left:1%" id="cellHP">HP: 100</span></a
+					>
+				</div>
+			</div>
+		</div>
 
-    <div class="row" id="row1" stlye="margin-top:1%"></div>
-    <div class="row" id="row1.5" style="margin-top: 1%"></div>
-    <div class="row" id="row2" style="margin-top:2%"></div>
-    <div class="row" id="row3" style="margin-top:2%"></div>
-  </body>
-  <script type="text/javascript" src="javascript/gameLogic.js"></script>
+		<div class="row" id="row1" stlye="margin-top:1%"></div>
+		<div class="row" id="row1.5" style="margin-top: 1%"></div>
+		<div class="row" id="row2" style="margin-top:2%"></div>
+		<div class="row" id="row3" style="margin-top:2%"></div>
+	</body>
+	<script type="text/javascript" src="javascript/gameLogic.js"></script>
 </html>
