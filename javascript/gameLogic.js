@@ -5,21 +5,23 @@ $(document).ready(function() {
   var goku = $("#goku");
   var row1 = $("#row1");
 
-  var gokuAttack = 6;
-  var vegetaAttack = 6;
-  var cellAttack = 6;
-  var beerusAttack = 6;
+  var attackHit = 6;
+  var health = 100;
 
+  function attack() {
+    $("#attack").on("click", function() {
+      console.log("clicked");
+      var row3 = $("#row3");
+      health = health - attackHit;
+      row3.find("span").text(health);
+    });
+  }
   function addAttackButton() {
     if (row1.children().length == 0) {
       row1.append(attackButton);
+      attack();
     }
   }
-
-  $("#attack").on("click", function() {
-    var row3 = $("#row3");
-    row3.find("span").text(100 - gokuAttack);
-  });
 
   var attackButton =
     "<button class='btn btn-primary' id='attack' style='margin-left:1%'>Attack</button>";
