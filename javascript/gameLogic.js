@@ -13,6 +13,7 @@ $(document).ready(function() {
       console.log("clicked");
       var row3 = $("#row3");
       health = health - attackHit;
+      attackHit = attackHit * 2;
       row3.find("span").text(health);
     });
   }
