@@ -8,13 +8,25 @@ $(document).ready(function() {
   var attackHit = 6;
   var health = 100;
 
+  function clearRow3() {
+    $("#row3").empty();
+    $("#row1")
+      .find(".btn-warning")
+      .remove();
+  }
+
   function attack() {
     $("#attack").on("click", function() {
       console.log("clicked");
       var row3 = $("#row3");
       health = health - attackHit;
       attackHit = attackHit * 2;
-      row3.find("span").text(health);
+      if (health < 1) {
+        row3.find("span").text("Crushed to the ground.");
+        setTimeout(clearRow3, 2000);
+      } else {
+        row3.find("span").text(health);
+      }
     });
   }
   function addAttackButton() {
@@ -76,9 +88,7 @@ $(document).ready(function() {
     goku.remove();
     cell.remove();
     vegeta.remove();
-    if (row1.children().length == 0) {
-      row1.append(attackButton);
-    }
+
     $("#row2").append(
       goku.on("click", function() {
         var row3 = $("#row3");
@@ -123,9 +133,7 @@ $(document).ready(function() {
     goku.remove();
     beerus.remove();
     vegeta.remove();
-    if (row1.children().length == 0) {
-      row1.append(attackButton);
-    }
+
     $("#row2").append(
       beerus.on("click", function() {
         var row3 = $("#row3");
@@ -170,9 +178,7 @@ $(document).ready(function() {
     goku.remove();
     cell.remove();
     beerus.remove();
-    if (row1.children().length == 0) {
-      row1.append(attackButton);
-    }
+
     $("#row2").append(
       beerus.on("click", function() {
         var row3 = $("#row3");
