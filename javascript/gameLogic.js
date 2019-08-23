@@ -4,10 +4,13 @@ $(document).ready(function() {
   var vegeta = $("#vegeta");
   var goku = $("#goku");
   var row1 = $("#row1");
+  
 
   var attackHit = 6;
-  var health = 100;
-
+  var health = 1000;
+  var playerCounterAttack = attackHit * 1.2
+  var playerHealth = 100;
+  
   function clearRow3() {
     $("#row3").empty();
     $("#row1")
@@ -15,18 +18,34 @@ $(document).ready(function() {
       .remove();
   }
 
+  function counterAttack(){
+    playerHealth = playerHealth - playerCounterAttack;
+    playerCounterAttack = playerCounterAttack * 1.2;
+   
+    if (!playerHealth < 1) {
+        row.find("#HP").text(Math.floor(playerHealth));
+        
+        
+      } else {
+        row.find("#HP").text("You have been defeated.");
+      }
+  }
   function attack() {
     $("#attack").on("click", function() {
       console.log("clicked");
       var row3 = $("#row3");
       health = health - attackHit;
-      attackHit = attackHit * 2;
+      attackHit = attackHit * 1.1;
+      
+      
       if (health < 1) {
-        row3.find("span").text("Crushed to the ground.");
+        row3.find("#HP").text("Crushed to the ground.");
         setTimeout(clearRow3, 2000);
       } else {
-        row3.find("span").text(health);
+        row3.find("#HP").text(Math.floor(health));
+        
       }
+      
     });
   }
   function addAttackButton() {
@@ -43,6 +62,8 @@ $(document).ready(function() {
     beerus.remove();
     cell.remove();
     vegeta.remove();
+    $("h1").empty()
+    $("h1").append("Select a defender!")
 
     $("#row2").append(
       beerus.on("click", function() {
@@ -50,6 +71,7 @@ $(document).ready(function() {
         if (row3.children().length == 0) {
           row3.append(beerus);
           addAttackButton();
+          $("h1").empty()
           row1.append(
             "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Beerus</strong></button>"
           );
@@ -63,6 +85,7 @@ $(document).ready(function() {
         if (row3.children().length == 0) {
           row3.append(cell);
           addAttackButton();
+          $("h1").empty()
           row1.append(
             "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Cell</strong></button>"
           );
@@ -76,6 +99,7 @@ $(document).ready(function() {
         if (row3.children().length == 0) {
           row3.append(vegeta);
           addAttackButton();
+          $("h1").empty()
           row1.append(
             "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Vegeta</strong></button>"
           );
@@ -88,13 +112,15 @@ $(document).ready(function() {
     goku.remove();
     cell.remove();
     vegeta.remove();
-
+    $("h1").empty()
+    $("h1").append("Select a defender!")
     $("#row2").append(
       goku.on("click", function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(goku);
           addAttackButton();
+          $("h1").empty()
           row1.append(
             "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Goku</strong></button>"
           );
@@ -108,6 +134,7 @@ $(document).ready(function() {
         if (row3.children().length == 0) {
           row3.append(cell);
           addAttackButton();
+          $("h1").empty()
           row1.append(
             "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Cell</strong></button>"
           );
@@ -121,6 +148,7 @@ $(document).ready(function() {
         if (row3.children().length == 0) {
           row3.append(vegeta);
           addAttackButton();
+          $("h1").empty()
           row1.append(
             "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Vegeta</strong></button>"
           );
@@ -133,6 +161,8 @@ $(document).ready(function() {
     goku.remove();
     beerus.remove();
     vegeta.remove();
+    $("h1").empty()
+    $("h1").append("Select a defender!")
 
     $("#row2").append(
       beerus.on("click", function() {
@@ -140,6 +170,7 @@ $(document).ready(function() {
         if (row3.children().length == 0) {
           row3.append(beerus);
           addAttackButton();
+          $("h1").empty()
           row1.append(
             "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Beerus</strong></button>"
           );
@@ -153,6 +184,7 @@ $(document).ready(function() {
         if (row3.children().length == 0) {
           row3.append(goku);
           addAttackButton();
+          $("h1").empty()
           row1.append(
             "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Goku</strong></button>"
           );
@@ -166,6 +198,7 @@ $(document).ready(function() {
         if (row3.children().length == 0) {
           row3.append(vegeta);
           addAttackButton();
+          $("h1").empty()
           row1.append(
             "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Vegeta</strong></button>"
           );
@@ -178,13 +211,15 @@ $(document).ready(function() {
     goku.remove();
     cell.remove();
     beerus.remove();
-
+    $("h1").empty()
+    $("h1").append("Select a defender!")
     $("#row2").append(
       beerus.on("click", function() {
         var row3 = $("#row3");
         if (row3.children().length == 0) {
           row3.append(beerus);
           addAttackButton();
+          $("h1").empty()
           row1.append(
             "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Beerus</strong></button>"
           );
@@ -200,6 +235,7 @@ $(document).ready(function() {
           console.log("Apending cell");
           row3.append(cell);
           addAttackButton();
+          $("h1").empty()
           row1.append(
             "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Cell</strong></button>"
           );
@@ -213,6 +249,7 @@ $(document).ready(function() {
         if (row3.children().length == 0) {
           row3.append(goku);
           addAttackButton();
+          $("h1").empty()
           row1.append(
             "<button class='btn btn-warning' style='margin-left: 1%; cursor: default'>You're fighting <strong>Goku</strong></button>"
           );

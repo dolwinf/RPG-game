@@ -3,3 +3,13 @@ body {
   background-blend-mode: multiply;
   font-family: "Lexend Tera", sans-serif !important;
 }
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
