@@ -10,9 +10,19 @@ $(document).ready(function() {
 	var opponentAttack = 2;
 	var opponentHealth = 1000;
 
+	setInterval(checkRemainingPlayers, 900);
+
+	function checkRemainingPlayers() {
+		if ($(".card").length < 2) {
+			$("#defender").html(
+				"<h1 class='blink_me'>You defated all of them! You are the new DBZ <strong> king!</strong></h1>"
+			);
+		}
+	}
+
 	function counterAttack() {
 		opponentHealth = opponentHealth - opponentAttack;
-		opponentAttack = opponentAttack * 1.5;
+		opponentAttack = opponentAttack * 1.2;
 		$("#attack").on("click", function() {
 			$("#health")
 				.find("#HP")
@@ -32,11 +42,12 @@ $(document).ready(function() {
 			console.log("clicked");
 			var row3 = $("#row3");
 			health = health - attackHit;
-			attackHit = attackHit * 2.1;
-			// counterAttack();
+			attackHit = attackHit * 1.5;
+			counterAttack();
+
 			if (health < 1) {
 				row3.find("#HP").text("Crushed to the ground.");
-				setTimeout(clearRow3, 2000);
+				setTimeout(clearRow3, 1000);
 				if ($("#row2").children().length !== 0) {
 					$("#defender").append(
 						"<h1 class='blink_me'>You smashed it! Select a new <strong> defender</strong></h1>"
