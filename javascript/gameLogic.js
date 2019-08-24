@@ -7,10 +7,20 @@ $(document).ready(function() {
 
 	var attackHit = 6;
 	var health = 1000;
-	var opponentAttack = 2;
+	var opponentAttack = 1;
 	var opponentHealth = 1000;
 
 	setInterval(checkRemainingPlayers, 900);
+	setInterval(checkHealth, 500);
+
+	function checkHealth() {
+		if (opponentHealth < 1) {
+			$(".row")
+				.first()
+				.find("#HP")
+				.text("You have been defeated");
+		}
+	}
 
 	function checkRemainingPlayers() {
 		if ($(".card").length < 2) {
@@ -20,7 +30,25 @@ $(document).ready(function() {
 		}
 	}
 
+	function beerusCounterAttack() {
+		var checkBeerus =
+			$("#row3")
+				.children()
+				.attr("id") == "beerus";
+		if (checkBeerus) {
+			var opponentAttack = 800;
+			opponentHealth = opponentHealth - opponentAttack;
+			opponentAttack = opponentAttack * 200;
+			$("#attack").on("click", function() {
+				$("#health")
+					.find("#HP")
+					.text(Math.floor(opponentHealth));
+			});
+		}
+	}
+
 	function counterAttack() {
+		beerusCounterAttack();
 		opponentHealth = opponentHealth - opponentAttack;
 		opponentAttack = opponentAttack * 1.2;
 		$("#attack").on("click", function() {
